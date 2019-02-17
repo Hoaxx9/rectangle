@@ -1,15 +1,13 @@
 #include "Head.h"
 
-
 rect::rect(){
 	hWin = GetConsoleWindow();
 	hDeviceContext = GetDC(hWin);
 	RECT rc;
 	GetClientRect(hWin, &rc);
 
-	COORD left_bottom = { rc.right / 2 - 32, rc.bottom / 2 + 15 },	//начальные координаты прямоугольника вычисляются исходя из
-		  right_top = { rc.right / 2 + 32, rc.bottom / 2 - 15 };	//размеров окна программы 
-																	//(числа 32 и 15 определены методом подбораи могут быть произвольными)
+	COORD left_bottom = { rc.right / 2 - 32, rc.bottom / 2 + 15 },		//С‡РёСЃР»Р° 15 Рё 32 РїСЂРѕРёР·РІРѕР»СЊРЅС‹Рµ
+		  right_top = { rc.right / 2 + 32, rc.bottom / 2 - 15 };																	//(Г·ГЁГ±Г«Г  32 ГЁ 15 Г®ГЇГ°ГҐГ¤ГҐГ«ГҐГ­Г» Г¬ГҐГІГ®Г¤Г®Г¬ ГЇГ®Г¤ГЎГ®Г°Г ГЁ Г¬Г®ГЈГіГІ ГЎГ»ГІГј ГЇГ°Г®ГЁГ§ГўГ®Г«ГјГ­Г»Г¬ГЁ)
 	
 	left_bottom_point = left_bottom;
 	right_top_point = right_top;
@@ -58,15 +56,15 @@ int main(){
 	srand(time(0));		
 	
 	GetConsoleCursorInfo(hStdout, &cursor);
-	cursor.bVisible = FALSE;					//отключаем видимость курсора
+	cursor.bVisible = FALSE; 		
 	SetConsoleCursorInfo(hStdout, &cursor);
 	
 	color cl;
-	int i = 0;				//счетчик	
+	int i = 0;				//СЃС‡РµС‚С‡РёРє	
 	move_rect rect1;
 	rect obj, *rect = &obj;
 
-	rect->draw_rect();		//отрисовываем первый прямоугольник с начальными параметрами
+	rect->draw_rect();			//РѕС‚СЂРёСЃРѕРІРєР° РїРµСЂРІРѕРіРѕ РїСЂСЏРјРѕСѓРіРѕР»СЊРЅРёРєР° СЃ РЅР°С‡Р°Р»СЊРЅС‹РјРё РїР°СЂР°РјРµС‚СЂР°РјРё
 
 	while (i < 13){
 		Sleep(500);			
