@@ -1,8 +1,8 @@
 class rect{
 public:
 	rect();
-	void draw_rect() const;					//отрисовывает прямоугольник
-	void set_rect(COORD, COORD, color);		//устанавливает координаты вершинам и цвет прямоугольнику
+	void draw_rect() const;			//РѕС‚СЂРёСЃРѕРІС‹РІР°РµС‚ РїСЂСЏРјРѕСѓРіРѕР»СЊРЅРёРє
+	void set_rect(COORD, COORD, color);	//СѓСЃС‚Р°РЅР°РІР»РёРІР°РµС‚ РєРѕРѕСЂРґРёРЅР°С‚С‹ РІРµСЂС€РёРЅР°Рј Рё С†РІРµС‚ РїСЂСЏРјРѕСѓРіРѕР»СЊРЅРёРєСѓ
 protected:
 	COORD left_bottom_point, right_top_point;
 	color c;
